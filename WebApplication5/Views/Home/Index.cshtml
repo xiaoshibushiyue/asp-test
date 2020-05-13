@@ -1,0 +1,13 @@
+﻿@using WebApplication5.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.Action("GetPartial")
+@Html.Partial("_Login",new User { Name="里斯"})
+<a href="/sport/Home/Index">content</a>
+@Html.RouteLink("体育板块", "sport_default",new { controller="Home",action="Index"},new { style="color:blue"})
+@Html.ActionLink("获取图片","Getfile",new { name="637133028529804858程序.png"})
+<a href="@Url.Action("GetFile",new { name="hehe"})">content</a>
+@Url.RouteUrl("Admin_default",new { controller="Home",action="Index",userid="123456",sex="man",age=12})

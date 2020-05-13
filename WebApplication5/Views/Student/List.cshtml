@@ -1,0 +1,16 @@
+﻿@model List<WebApplication5.Models.Student>
+@{
+    ViewBag.Title = "List";
+    //代码片段
+    int a = 0;
+}
+
+<h2>List</h2>
+<ul>
+    @a
+    @foreach (var stu in Model)
+    {
+    <li>@stu.Name</li>
+    }
+</ul>
+
